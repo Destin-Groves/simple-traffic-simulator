@@ -3,9 +3,11 @@ Single-lane roundabout represented
 Traffic can stop and start if there is room to merge.
 Cars have length, topspeed, acceleration, and braking.
 Cars have a destination that it will attempt to drive to without crashing.
+Right-of-way & speed limit
 
 PART 2:
 Visualizer
+Proper dimensions for cars and intersections
 
 Part 3:
 More multi-lane merge-only intersections
