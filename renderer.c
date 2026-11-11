@@ -162,6 +162,56 @@ struct road * buildRoundabout() {
     r19->start = 8;
     r20->start = 13;
 
+    r1-> start = 1;
+    r2-> start = 2;
+    r3-> start = 3;
+    r4-> start = 4;
+
+    r5-> start = 6;
+    r6-> start = 7;
+    r7-> start = 8;
+    r8-> start = 9;
+    
+    r9-> start = 11;
+    r10->start = 12;
+    r11->start = 13;
+    r12->start = 14;
+    
+    r13->start = 16;
+    r14->start = 17;
+    r15->start = 18;
+    r16->start = 19;
+    
+    r17->start = 18;
+    r18->start = 3;
+    r19->start = 8;
+    r20->start = 13;
+
+    r1-> end = 2;
+    r2-> end = 3;
+    r3-> end = 4;
+    r4-> end = 5;
+
+    r5-> end = 7;
+    r6-> end = 8;
+    r7-> end = 9;
+    r8-> end = 10;
+    
+    r9-> end = 12;
+    r10->end = 13;
+    r11->end = 14;
+    r12->end = 15;
+    
+    r13->end = 17;
+    r14->end = 18;
+    r15->end = 19;
+    r16->end = 20;
+    
+    r17->end = 3;
+    r18->end = 8;
+    r19->end = 13;
+    r20->end = 18;
+
 }
 
 struct road * getRoad(struct road * intersections, int numIntersections, int intersection1, int intersection2) {
