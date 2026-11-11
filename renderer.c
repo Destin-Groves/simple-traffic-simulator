@@ -35,6 +35,7 @@ void step() {
 }
 
 struct road * buildRoundabout() {
+    // remember, this being an adjacency matrix means that this is a directed graph. These roads only go one way.
     struct road * roundabout = calloc(20 * 20 * 2, sizeof(int));
     
     struct road * r1 = getRoad(roundabout, 20, 1, 2);
@@ -84,9 +85,32 @@ struct road * buildRoundabout() {
     r19->exists = 1;
     r20->exists = 1;
 
-    
 
+    // rough estimates of dimensions we pulled from a roundabout in TH.
+    r1->length = 100;
+    r2->length = 40;
+    r3->length = 40;
+    r4->length = 100;
 
+    r5->length = 100;
+    r6->length = 40;
+    r7->length = 40;
+    r8->length = 100;
+
+    r9->length= 100;
+    r10->length = 40;
+    r11->length = 40;
+    r12->length = 100;
+
+    r13->length = 100;
+    r14->length = 40;
+    r15->length = 40;
+    r16->length = 100;
+
+    r17->length = 20 * 3.14159;
+    r18->length = 20 * 3.14159;
+    r19->length = 20 * 3.14159;
+    r20->length = 20 * 3.14159;
 
 }
 
