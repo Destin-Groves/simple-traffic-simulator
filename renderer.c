@@ -2,8 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define NO_PATH 0
+
 // TODO: split traffic sim into separate file
 struct road {
+    int start;
+    int end;
     int exists;
     int length;
 };
@@ -14,23 +18,44 @@ struct car {
     double length; // of the car in meters
     double accelPerTick; // in m/s^2
     double brakePerTick; // in m/s^2
-    void * road; // TODO: make the type the road type
+    struct road * road; // road currently being travelled upon
     // TODO: front wheel and rear wheel to handle travelling across an intersection?
     // Current plan: car looks up and down the road, and then looks a single edge down an intersection.
     double positionAlongRoad; // travelled down in meters
+    struct road * destination; // address of the destination road
+    struct road * path; // path of roads to be travelled
 };
 
 int main(int argc, char const *argv[]) 
 {
     struct road * intersectionsAndRoads;
+    intersectionsAndRoads = buildRoundabout();
+
+    struct car testCar = {
+        .speed = 5,
+        .topSpeed = 10,
+        .length = 4.75,
+        .accelPerTick = 0.1,
+        .brakePerTick = 0.5,
+        .road = getRoad(intersectionsAndRoads, 20, 1, 2),
+        .positionAlongRoad = 0,
+        .destination = getRoad(intersectionsAndRoads, 20, 14, 15),
+        .path = NO_PATH
+    };
     
-    
+
+
     free(intersectionsAndRoads);
+    println("all done");
     return 0;
 }
 
 
 void step() {
+
+}
+
+struct road * pathfind() {
 
 }
 
@@ -111,6 +136,31 @@ struct road * buildRoundabout() {
     r18->length = 20 * 3.14159;
     r19->length = 20 * 3.14159;
     r20->length = 20 * 3.14159;
+
+    r1-> start = 1;
+    r2-> start = 2;
+    r3-> start = 3;
+    r4-> start = 4;
+
+    r5-> start = 6;
+    r6-> start = 7;
+    r7-> start = 8;
+    r8-> start = 9;
+    
+    r9-> start = 11;
+    r10->start = 12;
+    r11->start = 13;
+    r12->start = 14;
+    
+    r13->start = 16;
+    r14->start = 17;
+    r15->start = 18;
+    r16->start = 19;
+    
+    r17->start = 18;
+    r18->start = 3;
+    r19->start = 8;
+    r20->start = 13;
 
 }
 
