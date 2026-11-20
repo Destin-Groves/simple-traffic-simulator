@@ -1,0 +1,8 @@
+serial_traffic
+parallel_traffic
+ensemble_traffic
+test_traffic
+renderer
+*.o
+*.csv
+.DS_Store
